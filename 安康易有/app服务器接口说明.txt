@@ -1,0 +1,43 @@
+时间：2015-05-16
+author:李金亮
+
+
+app接口加密算法：
+
+1 key值：deee033dba7eb4f6dfb1bcc36bc555e8
+2 加密规则：把参数的值按照a-z排列，中间用#分隔
+	示例：871216#android#deee033dba7eb4f6dfb1bcc36bc555e8
+	用上面的字符串使用约定的md5方法进行加密
+
+
+
+1 获取app接口地址：http://项目跟路径/url.json
+
+参数：
+	type：app类型（android/ios）
+	version：版本号（自动更新时使用）
+返回：
+	[.....]所有app接口地址（多个）
+	isUpdate：是否有更新（0是没有，1有）
+	version：最新版本号
+	versionInfo：最新版本信息（文本类型）
+	downloadUrl：最新版本下载地址
+
+
+
+
+2 注册接口：
+参数：
+	account：账号[必须是手机号码]
+	passWord：密码[客户端需检查密码长度6-20位]
+返回：
+	会员信息
+
+
+3  登陆接口：
+参数：
+	account：账号
+	passWord：密码
+返回：
+	会员信息
+	
